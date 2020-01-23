@@ -54,7 +54,7 @@
  :outputs [""]
  :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
  :pos [133 50]
- }
+ :selected true}
  "wlw3tx650to3l5o" 
 {:color 3
  :inputs []
