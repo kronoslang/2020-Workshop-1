@@ -1,0 +1,98 @@
+{:identifier "Reverb-Delay"
+ :identity "ap1t3yavxhd3cge"
+ :patch
+{:cables
+{["1orm3odpa66y8jj" 0] [:fixed "dymxeebrd21utoj" 0]
+ ["dymxeebrd21utoj" 0] [:fixed "phc39tzh31s8m0a" 2]
+ ["dymxeebrd21utoj" 1] [:fixed "phc39tzh31s8m0a" 1]
+ ["dymxeebrd21utoj" 2] [:fixed "pviz5hw7e21dhfi" 0]
+ ["gty9n5cmt8jb2d3" 0] [:fixed "phc39tzh31s8m0a" 1]
+ ["gty9n5cmt8jb2d3" 1] [:fixed "uc7jacwpc17fhcn" 0]
+ ["pviz5hw7e21dhfi" 0] [:fixed "cfndd5s0m5bsh2i" 0]
+ ["pviz5hw7e21dhfi" 1] [:fixed "gty9n5cmt8jb2d3" 0]
+ ["q4mmlaokyjx7ter" 0] [:fixed "phc39tzh31s8m0a" 2]
+ ["uc7jacwpc17fhcn" 0] [:fixed "phc39tzh31s8m0a" 0]
+ ["uc7jacwpc17fhcn" 1] [:fixed "q4mmlaokyjx7ter" 0]}
+ :nodes
+{"1orm3odpa66y8jj" 
+{:inputs ["output"]
+ :label "$output"
+ :outputs [""]
+ :parsed [:free-var "output"]
+ :pos [323 37]
+ }
+ "cfndd5s0m5bsh2i" 
+{:flip-y true
+ :inputs []
+ :label "0.001"
+ :name "-60dB"
+ :outputs [""]
+ :parsed [:float "0.001"]
+ :pos [-62 174]
+ }
+ "dymxeebrd21utoj" 
+{:cable-midpoints 
+{2 [101 -113]}
+ 
+ :inputs ["sig" "num-samples" "feedback"]
+ :label "Delay:Comb($sig $num-samples $feedback)"
+ :name "comb filter"
+ :outputs [""]
+ :parsed [:fn "Delay:Comb" [:tuple [:free-var "sig"] [:free-var "num-samples"] [:free-var "feedback"]]]
+ :pos [131 36]
+ }
+ "gty9n5cmt8jb2d3" 
+{:cable-midpoints 
+{0 [38 162]}
+ 
+ :inputs ["a" "b" "more..."]
+ :label "/"
+ :name ""
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [-171 122]
+ }
+ "phc39tzh31s8m0a" 
+{:eval :destructure
+ :inputs []
+ :label "(a a2 num-samples sig sig2) = arg"
+ :outputs ["a" "a2" "sig"]
+ :parsed "arg"
+ :pos [-471 -145]
+ }
+ "pozt579iu20whfl" 
+{:color 4
+ :inputs []
+ :label ";## Delay Line for Reverb ##\n\n\nThis is a normal echo delay, but the feedback\ncoefficient is computed form a desired reverberation time.\n\n-60dB: 10^(20/-60) = 10^-3 = 0.001 \n\n\n\nrt60: decay time\n\nn: how many times audio passes through our delay line in rt60? \n\n\n\ng: attenuation per round-trip\n\nn = rt60 / delay_length \n\n\n\ng = 0.001^(1/n)"
+ :outputs []
+ :parsed [:comment "## Delay Line for Reverb ##\n\n\nThis is a normal echo delay, but the feedback\ncoefficient is computed form a desired reverberation time.\n\n-60dB: 10^(20/-60) = 10^-3 = 0.001 \n\n\n\nrt60: decay time\n\nn: how many times audio passes through our delay line in rt60? \n\n\n\ng: attenuation per round-trip\n\nn = rt60 / delay_length \n\n\n\ng = 0.001^(1/n)"]
+ :pos [-103 -413]
+ }
+ "pviz5hw7e21dhfi" 
+{
+ :inputs ["a" "b"]
+ :label "Math:Pow($a $b)"
+ :name "compute feedback from rt60"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [70 174]
+ }
+ "q4mmlaokyjx7ter" 
+{:flip-y true
+ :inputs ["sig"]
+ :label "Rate-of($sig)"
+ :outputs [""]
+ :parsed [:fn "Rate-of" [:tuple [:free-var "sig"]]]
+ :pos [-422 30]
+ }
+ "uc7jacwpc17fhcn" 
+{
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :name "rt60 in samples"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-259 77]
+ }}
+ :scale 1
+ :scroll [0 0]}}

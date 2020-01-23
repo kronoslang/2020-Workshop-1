@@ -1,0 +1,210 @@
+{:identifier "Reverb"
+ :identity "de7u3jzs01hdcgx"
+ :patch
+{:cables
+{["2ea0d6yyg8q57cc" 0] [:fixed "8nz76d492aelij6" 0]
+ ["2ea0d6yyg8q57cc" 1] [:fixed "53mp3bduz8mx8gs" 0]
+ ["3bolqeehx289lhy" 0] [:fixed "3rh7zs09ndmm4si" 0]
+ ["3bolqeehx289lhy" 1] [:fixed "96a4gcuz8xddrvq" 0]
+ ["3rh7zs09ndmm4si" 0] [:fixed "wa8t12mc8ff06vs" 0]
+ ["3rh7zs09ndmm4si" 2] [:fixed "uvwmulkm5v85598" 0]
+ ["6g65a8c6ina5jrs" 0] [:fixed "3bolqeehx289lhy" 0]
+ ["6rr3tqpiaaeukbd" 0] [:fixed "rx05pv73euxw5y1" 0]
+ ["6rr3tqpiaaeukbd" 1] [:fixed "tm3gi6hxoqt1ano" 0]
+ ["6rr3tqpiaaeukbd" 2] [:fixed "tm3gi6hxoqt1ano" 0]
+ ["6rr3tqpiaaeukbd" 3] [:fixed "k8valdia4xtckcn" 0]
+ ["85ws14b1g5qczr4" 0] [:fixed "81kdfqyzukt3s16" 0]
+ ["8nz76d492aelij6" 0] [:fixed "ci06k3e8asxwjvj" 0]
+ ["96k9asefn42x9rm" 0] [:fixed "85ws14b1g5qczr4" 0]
+ ["b62m8nz38h5ct6" 0] [:fixed "ejdbt877yrlv50y" 0]
+ ["ejdbt877yrlv50y" 0] [:fixed "65hm4wiqub7sjh1" 0]
+ ["ejdbt877yrlv50y" 1] [:fixed "6rr3tqpiaaeukbd" 0]
+ ["ejdbt877yrlv50y" 2] [:fixed "6g65a8c6ina5jrs" 0]
+ ["rx05pv73euxw5y1" 0] [:fixed "96k9asefn42x9rm" 0]
+ ["tm3gi6hxoqt1ano" 0] [:fixed "2ea0d6yyg8q57cc" 0]
+ ["tm3gi6hxoqt1ano" 1] [:fixed "53mp3bduz8mx8gs" 0]
+ ["uvwmulkm5v85598" 0] [:fixed "6rr3tqpiaaeukbd" 0]}
+ :nodes
+{"2ea0d6yyg8q57cc" 
+{:color 3
+ :inputs ["a" "b"]
+ :label "Max($a $b)"
+ :outputs [""]
+ :parsed [:fn "Max" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [-443 -102]
+ }
+ "3bolqeehx289lhy" 
+{:ephemeral-inputs #{"set1"}
+ :inputs ["func" "set1" "set..."]
+ :label "Algorithm:Map($func $set...)"
+ :name "fanout delay bank"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
+ :pos [161 69]
+ }
+ "3rh7zs09ndmm4si" 
+{:inputs ["a" "a2" "sig"]
+ :label "Reverb-Delay"
+ :name "our delay line"
+ :outputs [""]
+ :parsed [:fn "Reverb-Delay" [:tuple [:free-var "a"] [:free-var "a2"] [:free-var "sig"]]]
+ :pos [-48 205]
+ }
+ "53mp3bduz8mx8gs" 
+{:color 3
+ :inputs []
+ :label "0.5"
+ :outputs [""]
+ :parsed [:float "0.5"]
+ :pos [-513 -182]
+ }
+ "65hm4wiqub7sjh1" 
+{:inputs []
+ :label "0 .o 1"
+ :name "wet/dry"
+ :outputs [""]
+ :parsed [:widget "-zb7qzt" 0.33499999999999996 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "1"]}]
+ :pos [-183 275]
+ }
+ "6g65a8c6ina5jrs" 
+{:ephemeral-inputs #{"numbers1"}
+ :inputs ["numbers1" "numbers..."]
+ :label "Average($numbers...)"
+ :name "summing mixer"
+ :outputs [""]
+ :parsed [:fn "Average" [:tuple [:free-var "numbers1"] [:free-var "numbers..."]]]
+ :pos [296 70]
+ }
+ "6rr3tqpiaaeukbd" 
+{:color 3
+ :ephemeral-inputs #{"more1" "more2"}
+ :inputs ["a" "b" "more1" "more2" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more2"] [:free-var "more..."]]
+ :pos [-259 3]
+ }
+ "81kdfqyzukt3s16" 
+{:color 3
+ :inputs []
+ :label "0.3"
+ :outputs [""]
+ :parsed [:float "0.3"]
+ :pos [-719 2]
+ }
+ "85ws14b1g5qczr4" 
+{:color 3
+ :inputs ["freq"]
+ :label "Gen:Sin($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
+ :pos [-612 2]
+ }
+ "8nz76d492aelij6" 
+{:color 3
+ :inputs ["freq"]
+ :label "Gen:Saw($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Saw" [:tuple [:free-var "freq"]]]
+ :pos [-571 -101]
+ }
+ "96a4gcuz8xddrvq" 
+{:inputs []
+ :label "[#900 #990 #1090 #1200 #1320]"
+ :name "some arbitrary delay line lengths"
+ :outputs [""]
+ :parsed [:list [:invariant "900"] [:invariant "990"] [:invariant "1090"] [:invariant "1200"] [:invariant "1320"]]
+ :pos [-31 -80]
+ }
+ "96k9asefn42x9rm" 
+{:color 3
+ :inputs ["a"]
+ :label "* 800"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "800"]]
+ :pos [-500 2]
+ }
+ "b62m8nz38h5ct6" 
+{:inputs ["sig"]
+ :label "o))"
+ :name "play here!"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [468 221]
+ }
+ "ci06k3e8asxwjvj" 
+{:color 3
+ :inputs []
+ :label "1"
+ :outputs [""]
+ :parsed [:float "1"]
+ :pos [-690 -102]
+ }
+ "ejdbt877yrlv50y" 
+{:cable-midpoints 
+{1 [203 111]}
+ :inputs ["mix" "a" "b"]
+ :label "Math:Mix($mix $a $b)"
+ :name "blend dry and wet"
+ :outputs [""]
+ :parsed [:fn "Math:Mix" [:tuple [:free-var "mix"] [:free-var "a"] [:free-var "b"]]]
+ :pos [353 221]
+ }
+ "iaibjpprvso3w1r" 
+{:color 3
+ :inputs []
+ :label "; ## Signal Generator ##\n\n\nThis is a little signal generator\nthat makes some transients and \n\nmoving signals; that's useful when \n\nevaluating a reverb."
+ :outputs []
+ :parsed [:comment "## Signal Generator ##\n\n\nThis is a little signal generator\nthat makes some transients and \n\nmoving signals; that's useful when \n\nevaluating a reverb."]
+ :pos [-553 70]
+ }
+ "k8valdia4xtckcn" 
+{:color 3
+ :inputs []
+ :label "2"
+ :outputs [""]
+ :parsed [:float "2"]
+ :pos [-314 -170]
+ }
+ "r0r0987m7g2d6st" 
+{:inputs []
+ :label ";## Basic Reverb ##\n\n\nFanout bank structure of delay lines of different lengths,\nwhich should preferably not align too much on any harmonic series.\n\n\nEach feedback is computed from a desired reverberation decay time."
+ :outputs []
+ :parsed [:comment "## Basic Reverb ##\n\n\nFanout bank structure of delay lines of different lengths,\nwhich should preferably not align too much on any harmonic series.\n\n\nEach feedback is computed from a desired reverberation decay time."]
+ :pos [461 -207]
+ }
+ "rx05pv73euxw5y1" 
+{:color 3
+ :inputs ["freq"]
+ :label "Gen:Tri($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Tri" [:tuple [:free-var "freq"]]]
+ :pos [-397 2]
+ }
+ "tm3gi6hxoqt1ano" 
+{:color 3
+ :inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [-368 -102]
+ }
+ "uvwmulkm5v85598" 
+{:cable-midpoints 
+{}
+ :inputs ["sig"]
+ :label "$sig"
+ :outputs [""]
+ :parsed [:free-var "sig"]
+ :pos [-127 95]
+ }
+ "wa8t12mc8ff06vs" 
+{:inputs []
+ :label "1 -o- 15"
+ :name "RT60"
+ :outputs [""]
+ :parsed [:widget "x9q3al" 0.2642857142857143 {:type :slider, :limits [[:float "1"] [:float "15"]], :render [:limits], :size 3, :orientation :vertical, :curve :linear}]
+ :pos [-273 116]
+ }}
+ :scale 1
+ :scroll [0 0]}}

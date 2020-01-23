@@ -51,4 +51,40 @@ Serial-Fun() {
 nb9ldmq1p58a2j1e-0
 }
 
+Reverb() {
+(n2ea0d6yyg8q57cc-0) = Max(n8nz76d492aelij6-0 n53mp3bduz8mx8gs-0)
+(n96k9asefn42x9rm-0) = (n85ws14b1g5qczr4-0 * 800)
+(n6rr3tqpiaaeukbd-0) = (nrx05pv73euxw5y1-0 * ntm3gi6hxoqt1ano-0 * ntm3gi6hxoqt1ano-0 * nk8valdia4xtckcn-0)
+(n81kdfqyzukt3s16-0) = 0.3
+(n6g65a8c6ina5jrs-0) = Average(n3bolqeehx289lhy-0 )
+(n96a4gcuz8xddrvq-0) = [#900 #990 #1090 #1200 #1320]
+(nci06k3e8asxwjvj-0) = 1
+(nb62m8nz38h5ct6-0) = nejdbt877yrlv50y-0
+(n3bolqeehx289lhy-0) = Algorithm:Map(n3rh7zs09ndmm4si-0 n96a4gcuz8xddrvq-0 )
+(n85ws14b1g5qczr4-0) = Gen:Sin(n81kdfqyzukt3s16-0)
+(nejdbt877yrlv50y-0) = Math:Mix(n65hm4wiqub7sjh1-0 n6rr3tqpiaaeukbd-0 n6g65a8c6ina5jrs-0)
+(nk8valdia4xtckcn-0) = 2
+(n3rh7zs09ndmm4si-0) = (a2) => ( Reverb-Delay(nwa8t12mc8ff06vs-0 a2 nuvwmulkm5v85598-0) ) 
+(nuvwmulkm5v85598-0) = n6rr3tqpiaaeukbd-0
+(nrx05pv73euxw5y1-0) = Gen:Tri(n96k9asefn42x9rm-0)
+(nwa8t12mc8ff06vs-0) = 0.2642857142857143
+(n53mp3bduz8mx8gs-0) = 0.5
+(n65hm4wiqub7sjh1-0) = 0.33499999999999996
+(n8nz76d492aelij6-0) = Gen:Saw(nci06k3e8asxwjvj-0)
+(ntm3gi6hxoqt1ano-0) = (n2ea0d6yyg8q57cc-0 - n53mp3bduz8mx8gs-0)
+nb62m8nz38h5ct6-0
+}
+
+Reverb-Delay(a a2 sig) {
+(ndymxeebrd21utoj-0) = Delay:Comb(nphc39tzh31s8m0a-2 nphc39tzh31s8m0a-1 npviz5hw7e21dhfi-0)
+(nq4mmlaokyjx7ter-0) = Rate-of(nphc39tzh31s8m0a-2)
+(n1orm3odpa66y8jj-0) = ndymxeebrd21utoj-0
+(nuc7jacwpc17fhcn-0) = (nphc39tzh31s8m0a-0 * nq4mmlaokyjx7ter-0)
+(nphc39tzh31s8m0a-0 nphc39tzh31s8m0a-1 nphc39tzh31s8m0a-2) = arg
+(ncfndd5s0m5bsh2i-0) = 0.001
+(ngty9n5cmt8jb2d3-0) = (nphc39tzh31s8m0a-1 / nuc7jacwpc17fhcn-0)
+(npviz5hw7e21dhfi-0) = Math:Pow(ncfndd5s0m5bsh2i-0 ngty9n5cmt8jb2d3-0)
+n1orm3odpa66y8jj-0
+}
+
 }

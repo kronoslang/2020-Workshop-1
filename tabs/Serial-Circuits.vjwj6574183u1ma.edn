@@ -19,79 +19,68 @@
  :label "[1 2 3 4 5]"
  :outputs [""]
  :parsed [:list [:float "1"] [:float "2"] [:float "3"] [:float "4"] [:float "5"]]
- :pos [-146 240]
- }
+ :pos [-146 240]}
  "2vs3eo7sj2ll1ct" 
 {:inputs []
  :label "3"
  :outputs [""]
  :parsed [:float "3"]
- :pos [-110 -186]
- }
+ :pos [-110 -186]}
  "3uj20taa6ffl57e" 
 {:color 3
  :inputs []
  :label ";`Reduce` can build the exact same circuit for you like so:"
  :outputs []
  :parsed [:comment "`Reduce` can build the exact same circuit for you like so:"]
- :pos [-121 129]
- }
+ :pos [-121 129]}
  "7rmm25acr26fcn7" 
 {:inputs []
  :label ";## Serial Circuits ##\n\nThis is an example of a set of boxes connected in series."
  :outputs []
  :parsed [:comment "## Serial Circuits ##\n\nThis is an example of a set of boxes connected in series."]
- :pos [138 -342]
- }
+ :pos [138 -342]}
  "9dy3ybdw259t0um" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [42 21]
- }
+ :pos [42 21]}
  "9sr64l9kocpx69n" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [-139 -88]
- }
+ :pos [-139 -88]}
  "aa4g2z8bh9w12fs" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [-49 -33]
- }
+ :pos [-49 -33]}
  "biw8shgljgs150k" 
 {:inputs []
  :label ";<- evaluate here"
  :outputs []
  :parsed [:comment "<- evaluate here"]
- :pos [277 318]
- }
+ :pos [277 318]}
  "c31n0g5lvlblmfu" 
 {:inputs []
  :label "2"
  :outputs [""]
  :parsed [:float "2"]
- :pos [-197 -229]
- }
+ :pos [-197 -229]}
  "cw8ns3mlab0nuq1" 
 {:inputs []
  :label ";<- evaluate here to compute\n\n\n(just press enter, without cmd, to get a numeric display)"
  :outputs []
  :parsed [:comment "<- evaluate here to compute\n\n\n(just press enter, without cmd, to get a numeric display)"]
- :pos [310 14]
- }
+ :pos [310 14]}
  "oewcyfr5vwcbdg9" 
 {:inputs []
  :label "4"
  :outputs [""]
  :parsed [:float "4"]
- :pos [-23 -143]
- }
+ :pos [-23 -143]}
  "oxgdf65dnc6gykr" 
 {:color 3
  :ephemeral-inputs #{"set1"}
@@ -99,36 +88,31 @@
  :label "Algorithm:Reduce($func $set...)"
  :outputs [""]
  :parsed [:fn "Algorithm:Reduce" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
- :pos [99 332]
- }
+ :pos [99 332]}
  "pbjqkxk9v6h8568" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [-230 -142]
- }
+ :pos [-230 -142]}
  "tlp23ah7l5e2h3f" 
 {:inputs []
  :label "1"
  :outputs [""]
  :parsed [:float "1"]
- :pos [-326 -229]
- }
+ :pos [-326 -229]}
  "xw1btjp9n8akmu" 
 {:color 3
  :inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [-64 332]
- }
+ :pos [-64 332]}
  "yyt4g74q8hjxag7" 
 {:inputs []
  :label "5"
  :outputs [""]
  :parsed [:float "5"]
- :pos [64 -100]
- }}
+ :pos [64 -100]}}
  :scale 1
  :scroll [0 0]}}
