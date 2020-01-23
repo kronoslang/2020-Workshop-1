@@ -1,0 +1,66 @@
+{:identifier "Parallel-Filters"
+ :identity "6fiassmvt77d69i"
+ :patch
+{:cables
+{["3qw6t26i17qsvxs" 0] [:fixed "422yl1p837ohe8x" 0]
+ ["422yl1p837ohe8x" 0] [:fixed "sfmbrg2ckbuabsr" 0]
+ ["422yl1p837ohe8x" 1] [:fixed "i9ucvo65lce2ux1" 0]
+ ["nvmhbk7zbm4jbfs" 0] [:fixed "yty8smc6z1zx4q6" 0]
+ ["sfmbrg2ckbuabsr" 0] [:fixed "nvmhbk7zbm4jbfs" 0]
+ ["sfmbrg2ckbuabsr" 2] [:fixed "62o0u71sq1wfxjv" 0]}
+ :nodes
+{"3qw6t26i17qsvxs" 
+{:ephemeral-inputs #{"numbers1"}
+ :inputs ["numbers1" "numbers..."]
+ :label "Sum($numbers...)"
+ :outputs [""]
+ :parsed [:fn "Sum" [:tuple [:free-var "numbers1"] [:free-var "numbers..."]]]
+ :pos [254 305]}
+ "422yl1p837ohe8x" 
+{:color 3
+ :ephemeral-inputs #{"set1"}
+ :inputs ["func" "set1" "set..."]
+ :label "Algorithm:Map($func $set...)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
+ :pos [215 168]}
+ "62o0u71sq1wfxjv" 
+{:inputs []
+ :label "80"
+ :outputs [""]
+ :parsed [:float "80"]
+ :pos [-62 76]}
+ "9svq9yaxsxu19tb" 
+{:color 3
+ :inputs []
+ :label ";## Fanout Filter Bank ##\n\n\nTo create a fanout circuit, we use `Map` with\na function that has some *connected* inlets and one\n*disconnected* inlet. \n\n\n\nThe connections are replicated for each component of the parallel\nstructure, while the disconnected inlet is plugged by\n`Map` with each value of the incoming set."
+ :outputs []
+ :parsed [:comment "## Fanout Filter Bank ##\n\n\nTo create a fanout circuit, we use `Map` with\na function that has some *connected* inlets and one\n*disconnected* inlet. \n\n\n\nThe connections are replicated for each component of the parallel\nstructure, while the disconnected inlet is plugged by\n`Map` with each value of the incoming set."]
+ :pos [-6 -333]}
+ "i9ucvo65lce2ux1" 
+{:color 3
+ :inputs []
+ :label "[440 550 660]"
+ :name "list of bank parameters"
+ :outputs [""]
+ :parsed [:list [:float "440"] [:float "550"] [:float "660"]]
+ :pos [53 -8]}
+ "nvmhbk7zbm4jbfs" 
+{:inputs ["seed"]
+ :label "Gen:Noise($seed)"
+ :outputs [""]
+ :parsed [:fn "Gen:Noise" [:tuple [:free-var "seed"]]]
+ :pos [-76 168]}
+ "sfmbrg2ckbuabsr" 
+{:inputs ["sig" "freq" "bw"]
+ :label "Filter:Resonator($sig $freq $bw)"
+ :name "Mapping function, 'freq' is the bank parameter!"
+ :outputs [""]
+ :parsed [:fn "Filter:Resonator" [:tuple [:free-var "sig"] [:free-var "freq"] [:free-var "bw"]]]
+ :pos [70 168]}
+ "yty8smc6z1zx4q6" 
+{:inputs []
+ :label "0.499d"
+ :outputs [""]
+ :parsed [:double "0.499"]
+ :pos [-221 168]}}}}

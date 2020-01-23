@@ -1,0 +1,8 @@
+{
+  "dependencies": {},
+  "description": "Examples for the first workshop session at UniArts Helsinki, 2020",
+  "license": "https://www.eclipse.org/legal/epl-v10.html",
+  "name": "2020-Workshop-1",
+  "url": "https://kronoslang.io",
+  "version": "0.1"
+}

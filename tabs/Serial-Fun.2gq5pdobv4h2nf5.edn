@@ -1,0 +1,68 @@
+{:identifier "Serial-Fun"
+ :identity "2gq5pdobv4h2nf5"
+ :patch
+{:cables
+{["8ky6mfme94t8m8a" 0] [:fixed "whfewy7vr5gibta" 0]
+ ["8ky6mfme94t8m8a" 1] [:fixed "fkqlbbxqel7v1qp" 0]
+ ["b9ldmq1p58a2j1e" 0] [:fixed "8ky6mfme94t8m8a" 0]
+ ["whfewy7vr5gibta" 1] [:fixed "af48c01dx11e11t" 0]
+ ["whfewy7vr5gibta" 3] [:fixed "d3s544swlg9qj53" 0]}
+ :nodes
+{"2wsanzt6l4plyb1" 
+{:color 3
+ :inputs []
+ :label ";<- tweak here too!"
+ :outputs []
+ :parsed [:comment "<- tweak here too!"]
+ :pos [255 -47]}
+ "8ky6mfme94t8m8a" 
+{:ephemeral-inputs #{"set1"}
+ :inputs ["func" "set1" "set..."]
+ :label "Algorithm:Reduce($func $set...)"
+ :name "serial circuit"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Reduce" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
+ :pos [213 160]}
+ "af48c01dx11e11t" 
+{:color 3
+ :inputs []
+ :label "0 .o 4"
+ :name "FM depth"
+ :outputs [""]
+ :parsed [:widget "fyuisz" 0.41000000000000003 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "4"]}]
+ :pos [-268 23]}
+ "b9ldmq1p58a2j1e" 
+{:inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [333 160]}
+ "d3s544swlg9qj53" 
+{:color 3
+ :inputs []
+ :label "88 .o 880"
+ :name "frequency"
+ :outputs [""]
+ :parsed [:widget "-u4xqkw" 0.33999999999999997 {:type :dial, :skin :circular, :min [:float "88"], :max [:float "880"]}]
+ :pos [-143 23]}
+ "fkqlbbxqel7v1qp" 
+{:color 3
+ :inputs []
+ :label "[0 1 1 1]"
+ :name "operator ratios"
+ :outputs [""]
+ :parsed [:list [:float "0"] [:number-widget :float "3f21ta" "1" ""] [:number-widget :float "szamsm" "1" ""] [:number-widget :float "spk05f" "1" ""]]
+ :pos [29 -35]}
+ "sdu6eommag7dq44" 
+{:inputs []
+ :label ";# 4-Op FM #\n\n\nThis chaotic circuit has four FM operators in series.\n\n\nThe modulation cascade is realized with `Reduce`\nand a more complex reducing function, which takes\nmodulator signal from the left side and the operator frequency\nratio from the right side."
+ :outputs []
+ :parsed [:comment "# 4-Op FM #\n\n\nThis chaotic circuit has four FM operators in series.\n\n\nThe modulation cascade is realized with `Reduce`\nand a more complex reducing function, which takes\nmodulator signal from the left side and the operator frequency\nratio from the right side."]
+ :pos [-132 -341]}
+ "whfewy7vr5gibta" 
+{:inputs ["mod" "depth" "ratio" "f0"]
+ :label "Gen:Sin((1 + $mod * $depth) * $ratio * $f0)"
+ :name "operator circuit template"
+ :outputs [""]
+ :parsed [:fn "Gen:Sin" [:tuple [:infix [:infix [:tuple [:infix [:float "1"] "+" [:infix [:free-var "mod"] "*" [:free-var "depth"]]]] "*" [:free-var "ratio"]] "*" [:free-var "f0"]]]]
+ :pos [-107 160]}}}}

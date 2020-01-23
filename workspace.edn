@@ -1,0 +1,14 @@
+{:assets 
+{}
+ :current-tab 0
+ :file "2020-workshop-1.veneer"
+ :manifest 
+{:dependencies 
+{}
+ :description "Examples for the first workshop session at UniArts Helsinki, 2020"
+ :license "https://www.eclipse.org/legal/epl-v10.html"
+ :name "2020-Workshop-1"
+ :url "https://kronoslang.io"
+ :version "0.1"}
+ :name "2020-workshop-1"
+ :tabs ("tabs/Hello-Sine.initial.edn" "tabs/Parallel-Circuits.fukrw4s9ao84f6a.edn" "tabs/Serial-Circuits.vjwj6574183u1ma.edn" "tabs/Parallel-Filters.6fiassmvt77d69i.edn" "tabs/Serial-Fun.2gq5pdobv4h2nf5.edn")}

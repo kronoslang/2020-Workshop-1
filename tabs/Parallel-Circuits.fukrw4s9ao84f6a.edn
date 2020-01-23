@@ -1,0 +1,70 @@
+{:identifier "Parallel-Circuits"
+ :identity "fukrw4s9ao84f6a"
+ :patch
+{:cables
+{["31pts5c6o1920nk" 0] [:fixed "c2c8ybhj7gxe077" 0]
+ ["31pts5c6o1920nk" 1] [:fixed "12vnru4ng0hn5p" 0]
+ ["eao023f1rihfgfa" 0] [:fixed "31pts5c6o1920nk" 0]}
+ :nodes
+{"12vnru4ng0hn5p" 
+{:color 2
+ :inputs []
+ :label "[330 440 550 660]"
+ :outputs [""]
+ :parsed [:list [:float "330"] [:float "440"] [:float "550"] [:float "660"]]
+ :pos [-185 -138]}
+ "31pts5c6o1920nk" 
+{:ephemeral-inputs #{"set1"}
+ :inputs ["func" "set1" "set..."]
+ :label "Algorithm:Map($func $set...)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
+ :pos [108 -21]}
+ "ahu8gy8ogtyaewj" 
+{:color 2
+ :inputs []
+ :label "; Create a list node by double clicking and typing `[330 440 550 660]`"
+ :outputs []
+ :parsed [:comment "Create a list node by double clicking and typing `[330 440 550 660]`"]
+ :pos [-178 -71]}
+ "c2c8ybhj7gxe077" 
+{:color 3
+ :inputs ["freq"]
+ :label "Gen:Sin($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
+ :pos [-183 39]}
+ "ccb4ucpxwb0mifp" 
+{:color 3
+ :inputs []
+ :label ";`Sin` here has a disconnected inlet.\n\n\nThat's how `Map` knows where to plug values in."
+ :outputs []
+ :parsed [:comment "`Sin` here has a disconnected inlet.\n\n\nThat's how `Map` knows where to plug values in."]
+ :pos [-157 90]}
+ "eao023f1rihfgfa" 
+{:ephemeral-inputs #{"numbers1"}
+ :inputs ["numbers1" "numbers..."]
+ :label "Average($numbers...)"
+ :outputs [""]
+ :parsed [:fn "Average" [:tuple [:free-var "numbers1"] [:free-var "numbers..."]]]
+ :pos [151 107]}
+ "kgurrypyd4ppn7z" 
+{:inputs []
+ :label ";<- play here"
+ :outputs []
+ :parsed [:comment "<- play here"]
+ :pos [254 -39]}
+ "lon7wjry792kcda" 
+{:inputs []
+ :label ";<- or here"
+ :outputs []
+ :parsed [:comment "<- or here"]
+ :pos [297 94]}
+ "n701ts2hh2rwb7q" 
+{:inputs []
+ :label "; ## Programmatic Circuits ##\n\n\nCreate parallel circuits with `Map`!"
+ :outputs []
+ :parsed [:comment "## Programmatic Circuits ##\n\n\nCreate parallel circuits with `Map`!"]
+ :pos [55 -268]}}
+ :scale 1
+ :scroll [0 0]}}

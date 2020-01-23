@@ -1,0 +1,67 @@
+{:identifier "Hello-Sine"
+ :identity "initial"
+ :patch
+{:cables
+{["sjy6wwpom2uvvt7" 0] [:fixed "wlw3tx650to3l5o" 0]}
+ :nodes
+{"0pf2ix3txb7jk8w" 
+{:inputs []
+ :label ";You can find the *Sin* oscillator in a couple of ways:\n\n\nMenu : View : Library : Gen\n\n\nOr start typing `Sin`and pick Gen:Sin from the suggestions."
+ :outputs []
+ :parsed [:comment "You can find the *Sin* oscillator in a couple of ways:\n\n\nMenu : View : Library : Gen\n\n\nOr start typing `Sin`and pick Gen:Sin from the suggestions."]
+ :pos [261 -195]
+ }
+ "26kphke4u7ve995" 
+{:color 3
+ :inputs []
+ :label "; Create a free-form node by double clicking on the canvas\nand typing an expression.\n\n\nIn this case, we can just type `330`\nor any other frequency you might like."
+ :outputs []
+ :parsed [:comment "Create a free-form node by double clicking on the canvas\nand typing an expression.\n\n\nIn this case, we can just type `330`\nor any other frequency you might like."]
+ :pos [-248 -43]
+ }
+ "j4ua19sjre2r4ae" 
+{:color 2
+ :inputs []
+ :label ";# Hello Sine #\n\n\nWelcome to Veneer! It is the visual\ninterface to the Kronos programming language."
+ :outputs []
+ :parsed [:comment "# Hello Sine #\n\n\nWelcome to Veneer! It is the visual\ninterface to the Kronos programming language."]
+ :pos [-199 -354]
+ }
+ "ljv46kofutvw3jw" 
+{:inputs []
+ :label ";<- Select and Cmd+Enter to play!"
+ :outputs []
+ :parsed [:comment "<- Select and Cmd+Enter to play!"]
+ :pos [364 35]
+ }
+ "pb5495sqfc8au04" 
+{:inputs []
+ :label "; connect by dragging from outlet to inlet."
+ :outputs []
+ :parsed [:comment "connect by dragging from outlet to inlet."]
+ :pos [149 160]
+ }
+ "q4ufp3c8cm0w1no" 
+{:inputs []
+ :label ";pan by right-click dragging, zoom by option-right-dragging!"
+ :outputs []
+ :parsed [:comment "pan by right-click dragging, zoom by option-right-dragging!"]
+ :pos [-11 295]
+ }
+ "sjy6wwpom2uvvt7" 
+{:inputs ["freq"]
+ :label "Gen:Sin($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
+ :pos [133 50]
+ }
+ "wlw3tx650to3l5o" 
+{:color 3
+ :inputs []
+ :label "330"
+ :outputs [""]
+ :parsed [:float "330"]
+ :pos [-134 -105]
+ }}
+ :scale 0.83307126785616
+ :scroll [0 0]}}
